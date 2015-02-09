@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Short:</strong>
+  <%= @link.short %>
+</p>
+
+<p>
+  <strong>Full:</strong>
+  <%= @link.full %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @link.enabled %>
+</p>
+
+<%= link_to 'Edit', edit_link_path(@link) %> |
+<%= link_to 'Back', links_path %>
