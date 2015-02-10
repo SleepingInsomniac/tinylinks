@@ -2,17 +2,12 @@
 
 <p>
   <strong>Short:</strong>
-  <%= @link.short %>
+  <a href="/<%= @link.short %>">http://alexc.link/<%= @link.short %></a>
 </p>
 
 <p>
   <strong>Full:</strong>
   <%= @link.full %>
-</p>
-
-<p>
-  <strong>Enabled:</strong>
-  <%= @link.enabled %>
 </p>
 
 <%= link_to 'Edit', edit_link_path(@link) %> |
