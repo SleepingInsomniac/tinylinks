@@ -77,4 +77,5 @@ class LinksController < ApplicationController
     def link_params
       params.require(:link).permit(:full)
     end
+        
 end

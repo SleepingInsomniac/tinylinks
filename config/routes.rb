@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
+  resources :users
   resources :links
   root 'links#new'
+  
+  match '/login', to: 'users#login', via: :get
+  match '/login', to: 'users#try_login', via: :post
+  match '/logout', to: 'users#logout', via: :get
+  
   match '/:short', to: 'links#go', via: :get
   
   # The priority is based upon order of creation: first created -> highest priority.
