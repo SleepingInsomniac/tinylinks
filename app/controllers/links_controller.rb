@@ -63,10 +63,13 @@ class LinksController < ApplicationController
   
   def go
     link = Link.find_by(short: params[:short])
-    redirect_to link.full and return if link
-    render 404
+    if link
+      redirect_to link.full and return
+    else
+      not_found
+    end
   end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_link

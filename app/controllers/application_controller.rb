@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
     redirect_to controller: :users, action: :login and return unless session[:user_id]
   end
   
+  def not_found
+    raise ActionController::RoutingError.new('Not Found')
+  end
+  
 end
