@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = @user.authenticate(params[:password]) if @user
     redirect_to controller: :users, action: :login and return unless @user
     session[:user_id] = @user.id
-    redirect_to '/' and return
+    redirect_to controller: :links, action: :index and return
   end
   
   def logout
