@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :users
   resources :links
-  root 'links#new'
+  # root 'links#new'
+  root :to => redirect('http://alexclink.com')
   
   match '/login', to: 'users#login', via: :get
   match '/login', to: 'users#try_login', via: :post
